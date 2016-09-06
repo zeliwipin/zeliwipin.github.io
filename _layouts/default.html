@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ page.title }}</title>
-    <style>
-      body {font-size: 1.6em; line-height: 1.6em; margin: 3.2em auto; max-width: 32em;}
-      h1, h2 {margin-top: 3.2em;}
-      pre {margin: 3.2em 0;}
-    </style>
-  </head>
-  <body>
-    <h1>{{ page.title }}</h1>
-    {{ content }}
-    <p>
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> 
-      by <a href="https://www.romanzolotarev.com/">Roman Zolotarev</a>
-    </p>
-  </body>
-</html>
+<head><title>{{ page.title }}</title></head>
+<style>
+body { font-family: "Noto Sans", "Arial", sans-serif; font-size: 1em; }
+body,
+html { margin: 0; height: 100%; }
+a { color: #357edd; text-decoration: none; border-bottom: 1px solid #a5ceff; }
+a:visited { color: #888888; border-bottom: 1px solid #cccccc; }
+a:hover { color: #357edd; border-bottom: 1px solid #357edd; }
+body { line-height: 1.6em; margin: 0 auto; padding: 2em 1em; max-width: 32em; } @media (max-width: 38em) { .article { max-width: 28em; } }
+h1, h2 { line-height: 1em; font-weight: 700; letter-spacing: -0.03em; word-spacing: -0.03em; }
+h1 { font-size: 2.8em; margin-top: 1em; }
+h2 { font-size: 1.6em; margin-top: 3em; }
+p { margin: 1em 0; }
+p code { font-weight: 700; }
+p img { margin: 1em 0; width: 100%; }
+hr { border: none; margin-top: 4em; }
+ul { padding: 0; }
+ul li { list-style: none; }
+li { margin: 1em 0; }
+code,
+pre { font-family: "Menlo", "DejaVu Sans Mono", monospace; font-size: 0.9em; line-height: 1.5em; margin: 0; }
+pre { background-color: #eeeeee; color: #232323; margin: 0 -1em; overflow-x: auto; padding: 1em; word-wrap: normal; }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<h1>{{ page.title }}</h1>
+{{ content }}
+<p>&copy; 2017-2018 by <a href="https://www.romanzolotarev.com/">Roman Zolotarev</a></p>
+<hr>
+<p>
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+</p>
+<p>
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+</p>

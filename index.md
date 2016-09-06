@@ -2,17 +2,14 @@
 permalink: /
 title: Jekyll Minimalist
 ---
+This website is a minimalist boilerplate hosted on [GitHub Pages][pages].
 
-by [Roman Zolotarev](https://www.romanzolotarev.com/)
+Create your [standalone
+website](https://www.romanzolotarev.com/standalone.html) in few minutes
+without installing anything or touching the command line. All you need is
+your GitHub account (or email).
 
-This is an minimalist website boilerplate powered by [GitHub Pages][pages].
-There are just [three small files][source].
-
-You can create your own website like this in few minutes without installing
-anything or touching command line. All you need is your GitHub account (or
-email) and few minutes.
-
-# Quick Start
+## Quick Start
 
 1. [View source of this site on GitHub][source].
 1. Click on **Fork** button.
@@ -20,9 +17,11 @@ email) and few minutes.
 1. Go to **Settings** of your new repository and rename it to
    `USERNAME.github.io`, where `USERNAME` is your username on GitHub.
 1. Check (on **Settings** page) that **GitHub Pages** is enabled.
-1. Your site should be available at `http://USERNAME.github.io/`.
+1. Your site should be available at:
 
-# Add your pages
+    https://USERNAME.github.io/
+
+## Add your pages
 
 1. Click on **Create new file** in your new repository.
 1. Type-in file name, e.g. `about.md`
@@ -33,60 +32,61 @@ email) and few minutes.
 title: About
 ---
 
-This site is about nothing.
+This site is clean and beautiful.
 ```
 
-It is important to use front matter with `title` in every file. The new page
-should be available at `http://USERNAME.github.io/about` (based on its
-file name).
+It is important to use front matter with `title` in every file. The new
+page should be available at `https://USERNAME.github.io/about`. It's
+derived from its file name.
 
-# Custom domain (optional)
+## Custom domain (optional)
 
 Add `CNAME` file to your repository with your domain name. For example:
 
-```
-www.romanzolotarev.com
-```
+    www.romanzolotarev.com
 
-Then add `CNAME` record to DNS zone of your domain that points to
+Then add `CNAME` record to DNS zone for your domain that points to
 `USERNAME.github.io`. For example:
 
-```
-;; CNAME Records
-www.romanzolotarev.com. 300 IN  CNAME romanzolotarev.github.io.
-```
+    ;; CNAME Records
+    www.romanzolotarev.com. 300 IN CNAME romanzolotarev.github.io.
 
-Now your site should be available at your domain name. In case of those
-examples at `http://www.romanzolotarev.com/`.
+Now your site should be available via your domain name. In case of those examples at:
 
-# Install on your computer (optional)
+    https://www.romanzolotarev.com/
 
-GitHub Pages uses Jekyll to do all this magic. If you are familiar with git,
-then you may want to install GitHub Pages (with Jekyll) on your computer. So
-you will be able to edit your pages locally (e.g.  when you are offline) and
-view your site locally before publishing.
+## Install Jekyll on your computer (optional)
 
-For example to install on Mac run this command:
+GitHub Pages uses [Jekyll][jekyll] to do all this magic. If you are
+familiar with git, then you may want to install GitHub Pages (with Jekyll)
+on your computer. So you will be able to edit your pages locally (e.g.
+when you are offline) and view your site locally before publishing.
 
-```
-gem install github-pages
-```
+For example, to install it on macOS run the following commands. First,
+clone your repository and run Jekyll locally:
 
-Then clone your repository and run Jekyll locally.
+    $ git clone https://github.com/USERNAME/USERNAME.github.io
+    $ cd USERNAME.github.io
 
-```
-git clone https://github.com/USERNAME/USERNAME.github.io
-cd USERNAME.github.io
-jekyll serve -w
-```
+Install `bundler`:
 
-While Jekyll is running, open <http://localhost:4000/> in your browser. Your
-site should be there. You can add and edit pages and Jekyll will automatically
-regenerate HTML files, just reload the page in the browser to see changes.
+    $ gem install bundler
 
-[Learn more about Jekyll][jekyll].
+...and then `jekyll` with `jekyll-livereload` plug-in:
+
+    $ bundle install
+
+Start your local web server:
+
+    $ bundle exec jekyll serve --livereload --increment
+
+While Jekyll is running, open <http://localhost:4000/> in your browser.
+Your site should be there. You can add and edit pages and Jekyll will
+automatically regenerate HTML files.
 
 [jekyll]: https://jekyllrb.com/docs/home/
-[pages]: https://pages.github.com
-[source]: https://github.com/romanzolotarev/jekyll-minimalist
+[jongold]: https://mobile.twitter.com/jongold/status/694591217523363840
 [md]: https://guides.github.com/features/mastering-markdown/
+[pages]: https://pages.github.com/
+[source]: https://github.com/romanzolotarev/jekyll-minimalist
+[oatmeal]: http://theoatmeal.com/comics/design_hell
